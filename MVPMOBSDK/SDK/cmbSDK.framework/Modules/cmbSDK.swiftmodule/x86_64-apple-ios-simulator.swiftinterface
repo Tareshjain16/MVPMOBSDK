@@ -1,0 +1,25 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target x86_64-apple-ios9.3-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name cmbSDK
+import Swift
+import UIKit
+@_exported import cmbSDK
+@objc @_inheritsConvenienceInitializers public class MDMAuthCredentials : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var username: Swift.String?
+  @objc public var password: Swift.String?
+  @objc public var clientID: Swift.String?
+  @objc public var clientSecret: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public class ReaderInfoReporter : ObjectiveC.NSObject {
+  @objc public var reportingEnabled: Swift.Bool {
+    @objc get
+    @objc set(value)
+  }
+  @objc public init(dataManSystem: cmbSDK.CDMDataManSystem?)
+  @objc deinit
+  @objc override dynamic public init()
+}

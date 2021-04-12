@@ -1,0 +1,11 @@
+framework module cmbSDK {
+  umbrella header "cmbSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module cmbSDK.Swift {
+    header "cmbSDK-Swift.h"
+    requires objc
+}
